@@ -19,14 +19,14 @@ Set up an isolated cybersecurity testing lab with Kali Linux as the attacker mac
 | Shared Folder | Host `Downloads` folder |
 
 ## Steps
-1. Install 7-Zip and VMware on the host.
+1. Install 7-Zip and VMware on the host. and download the Kali VMware image from kali.org/get-kali,
 ![Alt text](Screenshots/Task01.png)
 2. Configure the network: `Edit > Virtual Network Editor > Change Settings`
    - Select `VMnet8` (NAT), Subnet IP `10.0.0.0`, Subnet mask `255.255.255.0`
    - NAT Settings: Gateway IP `10.0.0.254`
    - DHCP Settings: range `10.0.0.100 – 10.0.0.200`
 ![Alt text](Screenshots/Task01-2.png)
-3. Download the Kali VMware image from kali.org/get-kali, extract with 7-Zip, then `File > Open` the `.vmx` file (choose "I copied it" if prompted).
+3. Extract the Kali image with 7-Zip, then `File > Open` the `.vmx` file (choose "I copied it" if prompted).
 ![Alt text](Screenshots/Task01-5.png)
 4. Configure VM settings (`VM > Settings`):
    - Network Adapter: NAT
