@@ -20,12 +20,14 @@ Set up an isolated cybersecurity testing lab with Kali Linux as the attacker mac
 
 ## Steps
 1. Install 7-Zip and VMware on the host.
+![Alt text](Screenshots/Task01.png)
 2. Configure the network: `Edit > Virtual Network Editor > Change Settings`
    - Select `VMnet8` (NAT), Subnet IP `10.0.0.0`, Subnet mask `255.255.255.0`
    - NAT Settings: Gateway IP `10.0.0.254`
    - DHCP Settings: range `10.0.0.100 – 10.0.0.200`
+![Alt text](Screenshots/Task01-2.png)
 3. Download the Kali VMware image from kali.org/get-kali, extract with 7-Zip, then `File > Open` the `.vmx` file (choose "I copied it" if prompted).
-![Alt text](Screenshots/Task01.png)
+![Alt text](Screenshots/Task01-5.png)
 4. Configure VM settings (`VM > Settings`):
    - Network Adapter: NAT
    - Options > Guest Isolation: enable Drag and Drop and Copy and Paste
@@ -41,9 +43,9 @@ ip a                  # shows 10.0.0.2/24
 ping -c 4 10.0.0.254  # gateway
 ping -c 4 8.8.8.8     # internet
 ping -c 4 google.com  # DNS
-![Alt text](path/to/image.png)
-![Alt text](path/to/image.png)
 ```
+![Alt text](Screenshots/Task01-3.png)
+![Alt text](Screenshots/Task01-4.png)
 
 ## Troubleshooting
 - No internet: confirm VMnet8 settings and the gateway IP, and make sure no other VM uses `10.0.0.2`.
